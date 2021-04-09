@@ -1,1 +1,27 @@
 /* add home page styles here */
+
+body {
+    background-color: #0a0a0a;
+    color: #FFF;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: #000;
+}
