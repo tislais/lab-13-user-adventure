@@ -17,5 +17,6 @@ for (let quest of quests) {
     const questLink = document.createElement('a');
     questLink.textContent = quest.title;
     questLink.href = `../quest/?id=${quest.id}`;
+    questLink.classList.add(`${quest.id}-link`);
     mapDiv.append(questLink);
 }

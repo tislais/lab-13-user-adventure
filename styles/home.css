@@ -47,7 +47,7 @@ a {
 #map-div {
     background-image: url(../assets/OHOL.jpg);
     width: 800px;
-    height: 550px;
+    height: 570px;
     background-position: center top;
     background-size: cover;
     position: relative;
@@ -59,6 +59,7 @@ a {
     padding: 0 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 2px #666;
+    font-size: 1.1rem;
 }
 
 #quest-div {
@@ -98,3 +99,28 @@ header {
     width: 100%;
 }
 
+.arctic-link {
+    top: 70px;
+    right: 130px;
+}
+
+.language-link {
+    top: 330px;
+    right: 0px;
+}
+
+.jungle-link {
+    bottom: 100px;
+    left: 30px;
+}
+
+.desert-link {
+    bottom: 0px;
+    right: 65px;
+}
+
+.apocalypse-link {
+    left: 253px;
+    top: 170px;
+    color: #c83232;
+}

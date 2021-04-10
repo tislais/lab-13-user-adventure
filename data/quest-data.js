@@ -170,11 +170,51 @@ const desertQuest = {
     }]
 };
 
+const apocalypseQuest = {
+    id: 'apocalypse',
+    title: 'Apocalypse Tower',
+    map: {
+        top: '31%',
+        left: '5%'
+    },
+    prerequisites: ['dragon', 'monsters'],
+    image: 'treasure-chests.png',
+    audio: 'treasure-chests.wav',
+    action: 'chest-opening.wav',
+    description: `
+        As you enter the quest chamber you notice three chests before you.
+        Just as you start to imagine the wealth, you see a giant serpent
+        emerge from the back of the chamber. You'll need to make a run for it,
+        but you have time to open one chest before you take off. Which one 
+        do you choose?
+    `,
+    choices: [{
+        id: 'wooden',
+        description: 'A Wooden Chest',
+        result: 'You grab 40 gold pieces!',
+        hp: 0,
+        gold: 40
+    }, {
+        id: 'golden',
+        description: 'A Golden Chest',
+        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        hp: -50,
+        gold: 0
+    }, {
+        id: 'jeweled',
+        description: 'A Jeweled Chest',
+        result: 'A warm light engulfs you and you gain 35 hp',
+        hp: 35,
+        gold: 0
+    }]
+};
+
 const quests = [
     arcticQuest, 
     languageQuest,
     jungleQuest,
-    desertQuest
+    desertQuest,
+    apocalypseQuest
 ];
 
 export default quests;
