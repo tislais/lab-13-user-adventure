@@ -5,53 +5,47 @@ export const arcticQuest = {
         top: '89%',
         left: '44%'
     },
-    image: 'monsters.jpg',
+    image: '../assets/arctic/arctic.png',
+    texture: '../assets/textures/ground_4.png',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
-    `,
-    choices: [{
-        id: 'negotiate',
-        description: 'good',
-        result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+        You stumble upon a large village nestled deeply among the tall snowy mountains. A family of arctic experts dwell here. They enjoy great wealth due to their ability to drill for oil in the snow, providing the rarest and most essential resource for all advanced civilizations.
         `,
-        hp: +25,
+    choices: [{
+        id: 'good',
+        description: 'Steal their crude oil.',
+        result: `
+            You stash 8 tanks of crude oil in your horsecart and flee. They're so busy fighting and cult worshipping that they don't even notice! You scored the most valuable resource in the world and your family will sing praises for generations!
+        `,
+        hp: +100,
         age: +10
     }, {
-        id: 'fight',
-        description: 'bad',
+        id: 'neutral',
+        description: 'Explore the region.',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+            You leave the village and explore the nearby snowy mountains. You really aren't equipped for this. You're no expert at oil drilling so you're basically useless and have wasted years of your life.
         `,
         hp: 0,
-        gold: +10
-    }, {
-        id: 'run',
-        description: 'neutral',
-        result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
-        `,
-        hp: -20,
         age: +10
+    }, {
+        id: 'bad',
+        description: 'Trade for crude oil.',
+        result: `
+            You can't speak their language but they have a high-tech speech-translation device available. You use the device to negotiate a trade of valuable jungle resources in exchange for a few tanks of crude oil. They laugh at you! They don't need anything. They're rich! They kill you because they're bored. Your clothes, horse, and equipment now belong to them while your family at home suffers.
+        `,
+        hp: -25,
+        murder: true
     }]
 };
 
 const languageQuest = {
     id: 'language',
-    title: 'Kingdom of Thinn',
+    title: 'Thinn Kingdom',
     map: {
         top: '17%',
         left: '37%'
     },
     image: 'dragon.jpg',
-    audio: 'dragon.wav',
+    texture: '../assets/textures/ground_4.png',
     action: 'dragon-growl.aiff',
     description: `
         You run to a nearby village you have heard is being
@@ -107,7 +101,7 @@ const jungleQuest = {
     },
     prerequisites: ['dragon', 'monsters'],
     image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
+    texture: '../assets/textures/ground_6.png',
     action: 'chest-opening.wav',
     description: `
         As you enter the quest chamber you notice three chests before you.

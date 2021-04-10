@@ -15,7 +15,7 @@ export function setUser(user) {
 export function updateUser(questId, update) {
     const user = getUser();
 
-    user.age = update.age;
+    user.age += update.age;
     user.hp += update.hp;
 
     user.completed[questId] = true;

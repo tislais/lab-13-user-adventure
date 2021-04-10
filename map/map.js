@@ -1,11 +1,11 @@
-import quests from '../data/quests.js';
+import quests from '../data/quest-data.js';
 import { getUser } from '../local-storage-utils.js';
+import { renderHeader } from '../render-utils.js';
 
 const mapDiv = document.getElementById('map-div');
 const user = getUser();
-const header = document.querySelector('header');
 
-header.append(`Eve ${user.name}, ${user.age}`);
+renderHeader();
 
 const isDead = function(user) {
     return (user.age >= 60) ? true : false;
@@ -18,5 +18,4 @@ for (let quest of quests) {
     questLink.textContent = quest.title;
     questLink.href = `../quest/?id=${quest.id}`;
     mapDiv.append(questLink);
-    
 }

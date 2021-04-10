@@ -1,13 +1,27 @@
 /* add home page styles here */
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
+
 
 body {
-    background-color: #0a0a0a;
-    color: #FFF;
+    font-family: 'Walter Turncoat', cursive;
+    /*font-family: 'Gaegu', cursive;*/
+}
+
+.hidden {
+    display: none;
 }
 
 h1 {
     font-size: 2.5rem;
     font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 form {
@@ -22,6 +36,65 @@ form {
     align-items: center;
 }
 
-section {
-    background-color: #000;
+a {
+    color: #222;
+    font-size: 1.6rem;
+    margin: 10px;
+    display: block;
+    text-decoration: none;
 }
+
+#map-div {
+    background-image: url(../assets/OHOL.jpg);
+    width: 800px;
+    height: 550px;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+}
+
+#map-div a {
+    background-color: #FFF;
+    position: absolute;
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px #666;
+}
+
+#quest-div {
+    text-align: center;
+}
+
+#quest-div img {
+    width: 800px;
+    margin: 40px 0;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: left;
+    text-indent: 40px;
+}
+
+#quest-div label {
+    font-size: 1.6rem;
+}
+
+#quest-div button {
+    width: auto;
+    margin: 40px;
+}
+
+#quest-div input {
+    visibility: hidden;
+}
+
+#quest-div input:checked ~ div {
+    text-decoration: underline;
+}
+
+header {
+    width: 100%;
+}
+
