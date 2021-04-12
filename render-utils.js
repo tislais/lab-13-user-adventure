@@ -1,4 +1,4 @@
-import { getUser } from '../local-storage-utils.js';
+import { getUser } from './local-storage-utils.js';
 import { arcticExpert, languageExpert, jungleExpert, desertExpert } from './data/expert-data.js';
 
 
