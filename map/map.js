@@ -7,7 +7,13 @@ const user = getUser();
 
 renderHeader();
 
+const audio = document.getElementById('audio');
+const audioSource = document.getElementById('audio-source');
+audioSource.src = '../assets/music_01.ogg';
+audio.load();
+
 const isDead = function(user) {
+    if (user.dead === true) return true;
     return (user.age >= 60) ? true : false;
 };
 

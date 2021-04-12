@@ -3,7 +3,29 @@ import quests from '../data/quest-data.js';
 import { findById } from '../utils.js';
 import { getUser, updateUser } from '../local-storage-utils.js';
 
+
+const user = getUser();
 renderHeader();
+
+const audio = document.getElementById('audio');
+const audioSource = document.getElementById('audio-source');
+
+
+if (user.age < 10) {
+    audioSource.src = '../assets/music_03.ogg';
+} else if (user.age >= 10 && user.age < 20) {
+    audioSource.src = '../assets/music_08.ogg';
+} else if (user.age >= 20 && user.age < 30) {
+    audioSource.src = '../assets/music_06.ogg';
+} else if (user.age >= 30 && user.age < 40) {
+    audioSource.src = '../assets/music_11.ogg';
+} else if (user.age >= 40 && user.age < 50) {
+    audioSource.src = '../assets/music_02.ogg';
+} else {
+    audioSource.src = '../assets/music_12.ogg';
+}
+
+audio.load();
 
 const questDiv = document.getElementById('quest-div');
 const params = new URLSearchParams(window.location.search);

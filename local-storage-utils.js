@@ -17,6 +17,7 @@ export function updateUser(questId, update) {
 
     user.age += update.age;
     user.hp += update.hp;
+    user.dead = update.dead;
 
     user.completed[questId] = true;
     console.log(user.completed);
