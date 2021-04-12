@@ -10,10 +10,10 @@ form.addEventListener('submit', (event) => {
     const expertise = data.get('expert');
 
     const user = {
-        age: 10,
+        age: 0,
         name: name,
         expertise: expertise,
-        hp: 50,
+        hp: 30,
         completed: {}
     };
 

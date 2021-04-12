@@ -17,7 +17,8 @@ export const arcticQuest = {
             You stash 8 tanks of crude oil in your horsecart and flee. They're so busy fighting and cult worshipping that they don't even notice! You scored the most valuable resource in the world and your family will sing praises for generations!
         `,
         hp: +100,
-        age: +10
+        age: +10,
+        dead: false
     }, {
         id: 'neutral',
         description: 'Explore the region.',
@@ -25,7 +26,8 @@ export const arcticQuest = {
             You leave the village and explore the nearby snowy mountains. You really aren't equipped for this. You're no expert at oil drilling so you're basically useless and have wasted years of your life.
         `,
         hp: 0,
-        age: +10
+        age: +10,
+        dead: false
     }, {
         id: 'bad',
         description: 'Trade for crude oil.',
@@ -33,7 +35,66 @@ export const arcticQuest = {
             You can't speak their language but they have a high-tech speech-translation device available. You use the device to negotiate a trade of valuable jungle resources in exchange for a few tanks of crude oil. They laugh at you! They don't need anything. They're rich! They kill you because they're bored. Your clothes, horse, and equipment now belong to them while your family at home suffers.
         `,
         hp: -25,
-        murder: true
+        age: +0,
+        dead: true
+    }]
+};
+
+const homeQuest = {
+    id: 'home',
+    title: 'Home',
+    map: {
+        top: '17%',
+        left: '37%'
+    },
+    image: 'dragon.jpg',
+    texture: '../assets/textures/ground_4.png',
+    action: 'dragon-growl.aiff',
+    description: `
+        You run to a nearby village you have heard is being
+        terrorized by a dragon. Sure enough as you rent a room
+        in a local inn, you go outside and see the dragon about
+        to lay seige! What do you do?
+    `,
+    choices: [{
+        id: 'run',
+        description: 'Get the hell out of the village',
+        result: `
+            You high tail it in the opposite direction. Luckily,
+            in the panic you find a bag on the ground with 15 gold.
+            Unluckily, you trip over a discarded wagon wheel on your
+            way out of town and take 40 hp damage. 
+        `,
+        hp: -35,
+        age: +10,
+        dead: false
+    }, {
+        id: 'fight',
+        description: 'Fiiiiiggghhhttt!',
+        result: `
+            You attempt to charge towards the dragon, who sees you approach
+            and let's loose a fireball. You wake up the next morning and the
+            village has been completely burned to the ground.
+            Oh, and you take 45 hp damage.
+        `,
+        hp: -45,
+        age: +10,
+        dead: false
+    }, {
+        id: 'archer',
+        description: 'Emulate that guy from LOR who shot an arrow',
+        result: `
+            Inspired by the legend of Bard the Bowman, you notice a
+            stunned archer standing nearby and take their bow and quiver,
+            climb to the top of a tall tower and take aim. On the dragon's
+            next pass you steady your aim and let one fly. Amazingly,
+            you strike the dragon in the eye, piercing into the brain and
+            killing the dragon instantly. The villagers declare you their hero
+            and award you 90 gold.
+        `,
+        hp: 0,
+        age: +10,
+        dead: false
     }]
 };
 
@@ -63,7 +124,8 @@ const languageQuest = {
             way out of town and take 40 hp damage. 
         `,
         hp: -35,
-        gold: 15
+        age: +10,
+        dead: false
     }, {
         id: 'fight',
         description: 'Fiiiiiggghhhttt!',
@@ -74,7 +136,8 @@ const languageQuest = {
             Oh, and you take 45 hp damage.
         `,
         hp: -45,
-        gold: 0
+        age: +10,
+        dead: false
     }, {
         id: 'archer',
         description: 'Emulate that guy from LOR who shot an arrow',
@@ -88,7 +151,8 @@ const languageQuest = {
             and award you 90 gold.
         `,
         hp: 0,
-        gold: 90
+        age: +10,
+        dead: false
     }]
 };
 
@@ -115,19 +179,22 @@ const jungleQuest = {
         description: 'A Wooden Chest',
         result: 'You grab 40 gold pieces!',
         hp: 0,
-        gold: 40
+        age: +10,
+        dead: false
     }, {
         id: 'golden',
         description: 'A Golden Chest',
         result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
         hp: -50,
-        gold: 0
+        age: +10,
+        dead: false
     }, {
         id: 'jeweled',
         description: 'A Jeweled Chest',
         result: 'A warm light engulfs you and you gain 35 hp',
         hp: 35,
-        gold: 0
+        age: +10,
+        dead: false
     }]
 };
 
@@ -154,19 +221,63 @@ const desertQuest = {
         description: 'A Wooden Chest',
         result: 'You grab 40 gold pieces!',
         hp: 0,
-        gold: 40
+        age: +10,
+        dead: false
     }, {
         id: 'golden',
         description: 'A Golden Chest',
         result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
         hp: -50,
-        gold: 0
+        age: +10,
+        dead: false
     }, {
         id: 'jeweled',
         description: 'A Jeweled Chest',
         result: 'A warm light engulfs you and you gain 35 hp',
         hp: 35,
-        gold: 0
+        age: +10,
+        dead: false
+    }]
+};
+
+const apocalypseQuest = {
+    id: 'apocalypse',
+    title: 'Apocalypse Tower',
+    map: {
+        top: '31%',
+        left: '5%'
+    },
+    image: 'treasure-chests.png',
+    audio: 'treasure-chests.wav',
+    action: 'chest-opening.wav',
+    description: `
+        As you enter the quest chamber you notice three chests before you.
+        Just as you start to imagine the wealth, you see a giant serpent
+        emerge from the back of the chamber. You'll need to make a run for it,
+        but you have time to open one chest before you take off. Which one 
+        do you choose?
+    `,
+    choices: [{
+        id: 'wooden',
+        description: 'A Wooden Chest',
+        result: 'You grab 40 gold pieces!',
+        hp: 0,
+        age: +10,
+        dead: false
+    }, {
+        id: 'golden',
+        description: 'A Golden Chest',
+        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        hp: -50,
+        age: +10,
+        dead: false
+    }, {
+        id: 'jeweled',
+        description: 'A Jeweled Chest',
+        result: 'A warm light engulfs you and you gain 35 hp',
+        hp: 35,
+        age: +10,
+        dead: false
     }]
 };
 
@@ -174,7 +285,9 @@ const quests = [
     arcticQuest, 
     languageQuest,
     jungleQuest,
-    desertQuest
+    desertQuest,
+    apocalypseQuest,
+    homeQuest
 ];
 
 export default quests;
