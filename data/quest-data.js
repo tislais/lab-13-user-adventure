@@ -42,7 +42,7 @@ export const arcticQuest = {
 
 const homeQuest = {
     id: 'home',
-    title: 'Home',
+    title: 'your home village',
     map: {
         top: '17%',
         left: '37%'
