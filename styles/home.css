@@ -1,11 +1,9 @@
 /* add home page styles here */
 @import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
 
 
 body {
     font-family: 'Walter Turncoat', cursive;
-    /*font-family: 'Gaegu', cursive;*/
     background: #111;
     color: #eee;
     text-align: center;
@@ -49,9 +47,9 @@ h1 {
 }
 
 h3 {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.8rem;
     text-align: center;
+    margin: 40px 0;
 }
 
 form {
@@ -99,11 +97,20 @@ a {
 
 #quest-div {
     text-align: center;
+    width: 100%;
+    margin-top: 10px;
 }
 
 #quest-div img {
     width: 800px;
     margin: 40px 0;
+}
+
+.quest-image {
+    height: 340px;
+    background-position: center top;
+    background-size: cover;
+    margin: 10px 0;
 }
 
 p {
