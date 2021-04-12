@@ -48,53 +48,43 @@ const homeQuest = {
         left: '37%'
     },
     image: 'dragon.jpg',
+    imageArctic: '../assets/arctic/arctic-home.png',
+    imageLanguage: '../assets/language/language-home.png',
+    imageJungle: '../assets/jungle/jungle-home.png',
+    imageDesert: '../assets/desert/desert-home.png',
     texture: '../assets/textures/ground_4.png',
     action: 'dragon-growl.aiff',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        You are born in a semi-advanced town and your family is 20 people strong. Life is comforting for now but your help is needed. The family's newcomen well will dry out unless it is upgraded to use a diesel engine. The only problem is that your family doesn't have the resources needed to upgrade the technology! You will need to expore the map to find regional experts that can help you gather sulfur, latex, and palm oil so that you can create the drive belt needed to build the engine. You will also need kerosine for fuel. Remember that every one of your actions will not only effect you, but your family as well!
     `,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
+        id: 'farm',
+        description: 'Help out with the farm.',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            You spend the next few years making sure your family's crops are healthy. The workers in the kitchen thank you as they now have the supplies needed to make more advanced foods. Your family size grows thanks to your work! 
         `,
-        hp: -35,
+        hp: +5,
         age: +10,
         dead: false
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        id: 'socialize',
+        description: 'Socialize with your family.',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            You follow around various family members and talk their ears off. Even though you're being friendly, they're too busy trying to save the town and your friendliness becomes more of a distraction. Important work didn't get done due to your actions. Your family is worse off. 
         `,
-        hp: -45,
+        hp: -5,
         age: +10,
         dead: false
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'explore',
+        description: 'Explore the surrounding wilderness.',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            Whoops! The surrounding wildness sure is pretty, but it is bear-country and you've walked straight into a bear cave! You're to young to defend yourself and too slow to flee. You are mauled by the bear and succumb to your wounds. Your family mourns the death of a child.
         `,
-        hp: 0,
+        hp: +0,
         age: +10,
-        dead: false
+        dead: true,
+        deathCause: 'bear'
     }]
 };
 
@@ -105,50 +95,35 @@ const languageQuest = {
         top: '17%',
         left: '37%'
     },
-    image: 'dragon.jpg',
+    image: '../assets/language/language.png',
     texture: '../assets/textures/ground_4.png',
     action: 'dragon-growl.aiff',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        Language story
     `,
     choices: [{
         id: 'run',
-        description: 'Get the hell out of the village',
+        description: 'one',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            one
         `,
         hp: -35,
         age: +10,
         dead: false
     }, {
         id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        description: 'two!',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            two
         `,
         hp: -45,
         age: +10,
         dead: false
     }, {
         id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        description: 'three',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            three
         `,
         hp: 0,
         age: +10,
@@ -164,7 +139,7 @@ const jungleQuest = {
         left: '5%'
     },
     prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
+    image: '../assets/jungle/jungle.png',
     texture: '../assets/textures/ground_6.png',
     action: 'chest-opening.wav',
     description: `
@@ -206,15 +181,11 @@ const desertQuest = {
         left: '5%'
     },
     prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
+    image: '../assets/desert/desert.png',
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        This is a very new village and people are panicking and barely staying alive.
     `,
     choices: [{
         id: 'wooden',

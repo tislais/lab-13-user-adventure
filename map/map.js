@@ -17,7 +17,7 @@ renderHeader();
 const audio = document.getElementById('audio');
 const audioSource = document.getElementById('audio-source');
 audioSource.src = '../assets/music_01.ogg';
-audio.load();
+//audio.load();
 
 
 for (let quest of quests) {

@@ -13,7 +13,7 @@ form.addEventListener('submit', (event) => {
         age: 0,
         name: name,
         expertise: expertise,
-        hp: 30,
+        hp: 20,
         completed: {}
     };
 

@@ -2,10 +2,6 @@ import { getUser } from '../local-storage-utils.js';
 import { arcticExpert, languageExpert, jungleExpert, desertExpert } from './data/expert-data.js';
 
 
-//<audio autoplay>
-//<!--<source src="../assets/music_02.ogg" type="audio/ogg">-->
-//</audio>
-
 export function renderHeader() { 
     const user = getUser();
     const header = document.getElementById('header-wrap');
