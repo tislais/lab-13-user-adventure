@@ -36,4 +36,4 @@ resultsDiv.append(image, youDiedDiv, ageDiv, causeDiv, familyDiv, button);
 button.addEventListener('click', () => {
     localStorage.clear();
     window.location = '../';
-})
+});
