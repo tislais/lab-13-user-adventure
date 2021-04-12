@@ -14,11 +14,6 @@ const mapDiv = document.getElementById('map-div');
 
 renderHeader();
 
-const audio = document.getElementById('audio');
-const audioSource = document.getElementById('audio-source');
-audioSource.src = '../assets/music_01.ogg';
-//audio.load();
-
 
 for (let quest of quests) {
     const questLink = document.createElement('a');
