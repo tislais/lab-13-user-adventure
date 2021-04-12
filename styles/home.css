@@ -178,17 +178,17 @@ header {
     left: 253px;
     top: 170px;
     color: #c83232;
+    font-weight: bold;
 }
 
-.apocalypse-link, .apocalypse-completed {
-    left: 263px;
-    top: 180px;
-    color: #c83232;
-}
-
-.home-link, .home-completed {
-    left: 420px;
+.home-link {
+    left: 370px;
     top: 358px;
+}
+
+.home-completed {
+    left: 380px;
+    top: 368px;
 }
 
 #results-div img {
