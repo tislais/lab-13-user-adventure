@@ -34,7 +34,7 @@ test('This will set user object to localstorage', (expect) => {
 
 test('This will get new data and update localstorage', (expect) => {
     const stubUser = {
-        age: 3,
+        age: 0,
         name: 'nova',
         expertise: 'arctic',
         hp: 0,
@@ -44,8 +44,8 @@ test('This will get new data and update localstorage', (expect) => {
     localStorage.setItem('USER', JSON.stringify(stubUser));
 
     const stubUserUpdate = {
-        age: 14,
-        hp: 25
+        age: +10,
+        hp: +25
     };
 
     const questId = 'jungle';
@@ -53,7 +53,7 @@ test('This will get new data and update localstorage', (expect) => {
     updateUser(questId, stubUserUpdate);
 
     const expected = {
-        age: 14,
+        age: 10,
         name: 'nova',
         expertise: 'arctic',
         hp: 25,
