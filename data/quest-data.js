@@ -16,7 +16,7 @@ export const arcticQuest = {
         result: `
             You stash 8 tanks of crude oil in your horsecart and flee. They're so busy fighting and cult worshipping that they don't even notice! You scored the most valuable resource in the world and your family will sing praises for generations!
         `,
-        hp: +100,
+        hp: +5,
         age: +10,
         dead: false
     }, {
@@ -35,7 +35,7 @@ export const arcticQuest = {
         result: `
             You can't speak their language but they have a high-tech speech-translation device available. You use the device to negotiate a trade of valuable jungle resources in exchange for a few tanks of crude oil. They laugh at you! They don't need anything. They're rich! They kill you because they're bored. Your clothes, horse, and equipment now belong to them while your family at home suffers.
         `,
-        hp: -25,
+        hp: -5,
         age: +0,
         dead: true,
         deathCause: 'murder'
@@ -150,16 +150,19 @@ const jungleQuest = {
         id: 'trade',
         description: 'Trade for unfamiliar seeds.',
         result: `
-            Wandering through this villages farms your eyes dart from crop to crop full of unfamiliar yet plump and delicious vegetables and trees filled with magnificent fruit. Your mouth is watering after eating nothing but biscuits and foraged berries during your travel. Some of the farmers ask for your aid in tending the fields, giving you the experience to care for the plants and the payment of seeds to take home to your family. 
+            Wandering through the village's farms, your eyes dart from crop to crop full of unfamiliar yet plump and delicious vegetables and trees filled with magnificent fruit. Your mouth is watering after eating nothing but biscuits and foraged berries during your travel. Some of the farmers ask for your aid in tending the fields, giving you the experience to care for the plants and the payment of seeds to take home to your family. 
         `,
         hp: 0,
         age: +10,
         dead: false
     }, {
-        id: 'Sacrificial ritual',
+        id: 'sacrifice',
+        choiceImage: '../assets/nosaj.png',
         description: 
-            'During the night the priestest calls the family around for a ritual to bless their crops and natural springs. A celebration for a new birth in the village, the priest commits infanticide for the blessing of their gods. The knife soaked with the infants blood is placed in a skull alter which begins to smoke burning with an invisible fire. A bucket of water is poured over the altar billowing steam above the lit torches. The priestest snatches the stone telling you it has absorbed all of the evil in the tribe. she puts it in the palm of your hand, telling you to take it far away and hide it where no one will find it.',
-        result: 'Option 2 test',
+            'Sacrificial ritual.',
+        result: `
+            During the night, the priestest calls the family around for a ritual to bless their crops and natural springs. A celebration for a new birth in the village, the priest offers up the child for the blessing of their gods. The knife soaked with the infants blood is placed in a skull alter which begins to smoke burning with an invisible fire. A bucket of water is poured over the altar billowing steam above the lit torches. The priestest snatches the stone telling you it has absorbed all of the evil in the tribe. she puts it in the palm of your hand, telling you to take it far away and hide it where no one will find it.
+        `,
         hp: -5,
         age: +10,
         dead: false
@@ -185,11 +188,13 @@ const desertQuest = {
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
-        Intro text
+        While wondering in the desert and nearly dead from dehydration you stumble upon a village surrounded by desolate wasteland. They carry your quivering weak body into a village hut with a palm frawn roof. You feel instantly gratefull to be relieved of the burden of the scorching sun. A young woman cares for you, squeezing juice from the meat of some unknown fruit, providing you with the water of life you so desperatly need, caring for you for several weeks until you have regained your strength.
     `,
     choices: [{
-        id: 'one',
-        description: 'One',
+        id: 'Forage with the villagers',
+        description: `
+            You join the village in exploring the surrounding wasteland to forage for food. They show you how to be resourceful when exploring and that nearly everything that nature provides can be eaten for nurishment. Many of the plants you are shown how to eat look familiar to you from your travels, unknown to you that they could be eaten until now.
+        `,
         result: 'One',
         hp: 0,
         age: +10,
