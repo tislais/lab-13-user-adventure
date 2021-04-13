@@ -192,11 +192,11 @@ const desertQuest = {
         While wondering in the desert and nearly dead from dehydration you stumble upon a village surrounded by desolate wasteland. They carry your quivering weak body into a village hut with a palm frawn roof. You feel instantly gratefull to be relieved of the burden of the scorching sun. A young woman cares for you, squeezing juice from the meat of some unknown fruit, providing you with the water of life you so desperatly need, caring for you for several weeks until you have regained your strength.
     `,
     choices: [{
-        id: 'Forage with the villagers',
-        description: `
+        id: 'forage',
+        description: `Forage with the villagers`,
+        result: `
             You join the village in exploring the surrounding wasteland to forage for food. They show you how to be resourceful when exploring and that nearly everything that nature provides can be eaten for nurishment. Many of the plants you are shown how to eat look familiar to you from your travels, unknown to you that they could be eaten until now.
         `,
-        result: 'One',
         hp: 0,
         age: +10,
         dead: false
