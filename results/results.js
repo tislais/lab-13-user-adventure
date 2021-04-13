@@ -11,7 +11,11 @@ const familyDiv = document.createElement('div');
 const button = document.createElement('button');
 const image = document.createElement('img');
 
-image.src = '../assets/dead.png';
+if (user.dead) {
+    image.src = '../assets/murdergrave.png';
+} else {
+    image.src = '../assets/dead.png';
+}
 youDiedDiv.textContent = `You died.`;
 ageDiv.textContent = `Age: ${user.age} years`;
 causeDiv.textContent = `Cause: ${user.deathCause}`;

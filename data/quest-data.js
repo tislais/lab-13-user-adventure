@@ -62,7 +62,7 @@ const homeQuest = {
         id: 'farm',
         description: 'Help out with the farm.',
         result: `
-            You spend the next few years making sure your family's crops are healthy. The workers in the kitchen thank you as they now have the supplies needed to make more advanced foods. Your family size grows thanks to your work! 
+            You spend the next few years making sure your family's crops are healthy. Workers all over town thank you as they now have the supplies needed to make more advanced foods. Your family size grows due to your hard work! 
         `,
         hp: +5,
         age: +10,
@@ -71,7 +71,7 @@ const homeQuest = {
         id: 'socialize',
         description: 'Socialize with your family.',
         result: `
-            You follow around various family members and talk their ears off. Even though you're being friendly, they're too busy trying to save the town and your friendliness becomes more of a distraction. Important work didn't get done due to your actions. Your family is worse off. 
+            You follow around various family members, asking questions and telling jokes. Even though you're being friendly, they become annoyed and your friendliness is distracting them from doing their jobs. Important work didn't get done due to your actions. Your family has made no progress. 
         `,
         hp: -5,
         age: +10,
@@ -101,31 +101,31 @@ const languageQuest = {
     texture: '../assets/textures/ground_4.png',
     action: 'dragon-growl.aiff',
     description: `
-        Language story
+        You approach an enormous walled city. The language experts live here. Inside the walls are vineyards, shops, and beautiful gardens. Birds sing in the trees that line the graveyard where hundreds of generations of ancestors lie. 
     `,
     choices: [{
-        id: 'run',
-        description: 'one',
+        id: 'trade',
+        description: 'Trade for oil.',
         result: `
-            one
+            They refuse your offer. While they desperately need the resources you already have, they have nothing to offer you in return. aside from songs, laughter, and tales of fallen heroes. 
         `,
         hp: -35,
         age: +10,
         dead: false
     }, {
-        id: 'fight',
-        description: 'two!',
+        id: 'gift',
+        description: 'Gift excess resources.',
         result: `
-            two
+            They are overjoyed by your generosity! Bards pull out their pencils and begin writing songs and stories about your heroism and kindness. They promise to never forget your actions and will repay the debt to your family. Their encouragement gives you the strength and motivation you need to continue your journey.
         `,
         hp: -45,
         age: +10,
         dead: false
     }, {
-        id: 'archer',
-        description: 'three',
+        id: 'socialize',
+        description: 'Third option',
         result: `
-            three
+            Third option
         `,
         hp: 0,
         age: +10,
@@ -145,31 +145,27 @@ const jungleQuest = {
     texture: '../assets/textures/ground_6.png',
     action: 'chest-opening.wav',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        Intro text
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        id: 'good',
+        description: 'Option 1',
+        result: 'Option 1 text',
         hp: 0,
         age: +10,
         dead: false
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-        hp: -50,
+        id: 'bad',
+        description: 'Option 2',
+        result: 'Option 2 test',
+        hp: -5,
         age: +10,
         dead: false
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
+        id: 'neutral',
+        description: 'Option 3',
+        result: 'Option 3 text',
+        hp: +5,
         age: +10,
         dead: false
     }]
@@ -187,27 +183,27 @@ const desertQuest = {
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
-        This is a very new village and people are panicking and barely staying alive.
+        Intro text
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        id: 'one',
+        description: 'One',
+        result: 'One',
         hp: 0,
         age: +10,
         dead: false
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-        hp: -50,
+        id: 'two',
+        description: 'Two',
+        result: 'Two',
+        hp: -5,
         age: +10,
         dead: false
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
+        id: 'three',
+        description: 'Three',
+        result: 'Three',
+        hp: +5,
         age: +10,
         dead: false
     }]
@@ -224,33 +220,30 @@ const apocalypseQuest = {
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        bjklfdsjfklskjf
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        id: 'good',
+        description: 'sareadgad',
+        result: ' dsa dsdsadf a dsa dsa dsadsa',
         hp: 0,
         age: +10,
         dead: false
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        id: 'bad',
+        description: 'dsadsa',
+        result: 'dsfdsfds dsf dsfds',
         hp: -50,
         age: +10,
         dead: false
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
+        id: 'worse',
+        description: 'Apoc',
+        result: 'A warm light engulfs you',
         hp: 35,
         age: +10,
-        dead: false
+        dead: true,
+        deathCause: 'Apocalypse'
     }]
 };
 
