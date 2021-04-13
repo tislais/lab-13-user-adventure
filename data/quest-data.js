@@ -105,11 +105,11 @@ const languageQuest = {
     `,
     choices: [{
         id: 'trade',
-        description: 'Trade for oil.',
+        description: 'Trade.',
         result: `
-            They refuse your offer. While they desperately need the resources you already have, they have nothing to offer you in return. aside from songs, laughter, and tales of fallen heroes. 
+            They refuse your offer. While they desperately need the resources you already have, they have nothing to offer you in return aside from songs, laughter, and tales of fallen heroes. 
         `,
-        hp: -35,
+        hp: -5,
         age: +10,
         dead: false
     }, {
@@ -118,14 +118,14 @@ const languageQuest = {
         result: `
             They are overjoyed by your generosity! Bards pull out their pencils and begin writing songs and stories about your heroism and kindness. They promise to never forget your actions and will repay the debt to your family. Their encouragement gives you the strength and motivation you need to continue your journey.
         `,
-        hp: -45,
+        hp: +5,
         age: +10,
         dead: false
     }, {
-        id: 'socialize',
-        description: 'Third option',
+        id: 'steal',
+        description: 'Steal horse',
         result: `
-            Third option
+            You approach a horse hitched to the animal pen. Cows and sheep approach you looking for food. After unhitching the horse, an old man approaches asking your intentions with the beast but you ignore him mounting the mare. The man cries the town as you head back to your family -- a new horse to help with the fields. This might end in a long feud between your families for your ill gotten gain but for now your family will prosper with the new work horse.
         `,
         hp: 0,
         age: +10,
@@ -140,23 +140,25 @@ const jungleQuest = {
         top: '31%',
         left: '5%'
     },
-    prerequisites: ['dragon', 'monsters'],
     image: '../assets/jungle/jungle.png',
     texture: '../assets/textures/ground_6.png',
     action: 'chest-opening.wav',
     description: `
-        Intro text
+        Approaching the village you immediately feel the humidity of the jungle overtake you. The village is rich with culture, the walls have murals and everyone is dressed in loud colorful clothing. Many people have drawings covering their face and you have the feeling they can not be removed. Their fields are filled with unfamiliar and attractive food.
     `,
     choices: [{
-        id: 'good',
-        description: 'Option 1',
-        result: 'Option 1 text',
+        id: 'trade',
+        description: 'Trade for unfamiliar seeds.',
+        result: `
+            Wandering through this villages farms your eyes dart from crop to crop full of unfamiliar yet plump and delicious vegetables and trees filled with magnificent fruit. Your mouth is watering after eating nothing but biscuits and foraged berries during your travel. Some of the farmers ask for your aid in tending the fields, giving you the experience to care for the plants and the payment of seeds to take home to your family. 
+        `,
         hp: 0,
         age: +10,
         dead: false
     }, {
-        id: 'bad',
-        description: 'Option 2',
+        id: 'Sacrificial ritual',
+        description: 
+            'During the night the priestest calls the family around for a ritual to bless their crops and natural springs. A celebration for a new birth in the village, the priest commits infanticide for the blessing of their gods. The knife soaked with the infants blood is placed in a skull alter which begins to smoke burning with an invisible fire. A bucket of water is poured over the altar billowing steam above the lit torches. The priestest snatches the stone telling you it has absorbed all of the evil in the tribe. she puts it in the palm of your hand, telling you to take it far away and hide it where no one will find it.',
         result: 'Option 2 test',
         hp: -5,
         age: +10,
