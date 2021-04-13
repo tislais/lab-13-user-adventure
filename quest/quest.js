@@ -83,6 +83,8 @@ questDiv.append(image, h3, pIntro, pQuestion, form);
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+
+    const choiceImage = document.createElement('img');
     const formData = new FormData(form);
     const choiceId = formData.get('choice');
     const choice = findById(quest.choices, choiceId);
@@ -90,12 +92,15 @@ form.addEventListener('submit', (event) => {
     const mapButton = document.createElement('button');
     updateUser(questId, choice);
 
+    choiceImage.classList.remove('hidden');
+    choiceImage.src = choice.choiceImage;
     pIntro.classList.add('hidden');
+    image.classList.add('hidden');
     pQuestion.classList.add('hidden');
     form.classList.add('hidden');
     result.textContent = choice.result;
     mapButton.textContent = 'Back to map';
-    questDiv.append(result, mapButton);
+    questDiv.append(choiceImage, result, mapButton);
 
     mapButton.addEventListener('click', () => {
         window.location = '../map';

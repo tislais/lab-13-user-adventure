@@ -30,13 +30,15 @@ export const arcticQuest = {
         dead: false
     }, {
         id: 'bad',
+        choiceImage: '../assets/arctic/arctic-death.png',
         description: 'Trade for crude oil.',
         result: `
             You can't speak their language but they have a high-tech speech-translation device available. You use the device to negotiate a trade of valuable jungle resources in exchange for a few tanks of crude oil. They laugh at you! They don't need anything. They're rich! They kill you because they're bored. Your clothes, horse, and equipment now belong to them while your family at home suffers.
         `,
         hp: -25,
         age: +0,
-        dead: true
+        dead: true,
+        deathCause: 'murder'
     }]
 };
 
@@ -53,7 +55,6 @@ const homeQuest = {
     imageJungle: '../assets/jungle/jungle-home.png',
     imageDesert: '../assets/desert/desert-home.png',
     texture: '../assets/textures/ground_4.png',
-    action: 'dragon-growl.aiff',
     description: `
         You are born in a semi-advanced town and your family is 20 people strong. Life is comforting for now but your help is needed. The family's newcomen well will dry out unless it is upgraded to use a diesel engine. The only problem is that your family doesn't have the resources needed to upgrade the technology! You will need to expore the map to find regional experts that can help you gather sulfur, latex, and palm oil so that you can create the drive belt needed to build the engine. You will also need kerosine for fuel. Remember that every one of your actions will not only effect you, but your family as well!
     `,
@@ -77,14 +78,15 @@ const homeQuest = {
         dead: false
     }, {
         id: 'explore',
+        choiceImage: '../assets/bear.png',
         description: 'Explore the surrounding wilderness.',
         result: `
-            Whoops! The surrounding wildness sure is pretty, but it is bear-country and you've walked straight into a bear cave! You're to young to defend yourself and too slow to flee. You are mauled by the bear and succumb to your wounds. Your family mourns the death of a child.
+            Ahh. The surrounding wildness sure is pretty. But wait -- isn't this bear-country? You've walked straight into a bear cave! You're too young to defend yourself and you're too slow to flee. You are mauled by the bear and succumb to your wounds in a brutal and agonizing death. Your family mourns the death of a child.
         `,
         hp: +0,
         age: +10,
         dead: true,
-        deathCause: 'bear'
+        deathCause: 'mauled by bear'
     }]
 };
 
