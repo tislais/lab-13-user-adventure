@@ -19,6 +19,7 @@ export function updateUser(questId, update) {
     user.hp += update.hp;
     user.dead = update.dead;
     user.deathCause = update.deathCause;
+    user.hasEndstone = update.hasEndstone;
     user.completed[questId] = true;
 
     setUser(user);

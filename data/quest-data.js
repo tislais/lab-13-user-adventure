@@ -81,7 +81,7 @@ const homeQuest = {
         choiceImage: '../assets/bear.png',
         description: 'Explore the surrounding wilderness.',
         result: `
-            Ahh. The surrounding wildness sure is pretty. But wait -- isn't this bear-country? You've walked straight into a bear cave! You're too young to defend yourself and you're too slow to flee. You are mauled by the bear and succumb to your wounds in a brutal and agonizing death. Your family mourns the death of a child.
+            Ahh. The surrounding wildness sure is pretty. But wait -- isn't this bear-country? You've walked straight into a bear cave! You're too young to defend yourself and you're too slow to flee. You are mauled by the bear and succumb to your wounds in a brutal and agonizing death. Your family mourns the loss of a child.
         `,
         hp: +0,
         age: +10,
@@ -165,7 +165,8 @@ const jungleQuest = {
         `,
         hp: -5,
         age: +10,
-        dead: false
+        dead: false,
+        hasEndstone: true
     }, {
         id: 'neutral',
         description: 'Option 3',
